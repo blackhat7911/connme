@@ -12,15 +12,23 @@ class Profile(models.Model):
         return str(self.user.username)
 
 class Relationship(models.Model):
-    RELATION = (
-        ('following', 'following'),
-        ('notfollowing', 'notfollowing'),
-    )
-    user = models.OneToOneField(Profile, on_delete=models.CASCADE)
-    following = models.ManyToManyField(Profile, related_name="following")
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    following = models.ManyToManyField(Profile, related_name='following')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return str(self.user.username)
-    
+
+    @classmethod
+    def follow(cls, user, another_acc):
+        obj, create = cls.objects.get_or_create(user=user)
+        obj.following.add(following)
+        print("Followed")
+
+    @classmethod
+    def unfollow(self):
+        obj, create = cls.objects.get_or_create(user=user)
+        obj.following.remove(following)
+        print("Unfollowed")
+
     

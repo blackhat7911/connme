@@ -82,7 +82,11 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '3306',
         'USER': 'bishal',
-        'PASSWORD': 'Bishal@123'
+        'PASSWORD': 'Bishal@123',
+        'STORAGE_ENGINE': 'MyISAM / INNODB / ETC'
+    },
+    'OPTIONS': {
+        "init_command": "SET foreign_key_checks=0;"
     }
 }
 
@@ -124,3 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend/build/static')
+]
