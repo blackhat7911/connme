@@ -2,6 +2,7 @@ import React from 'react';
 import AppIllustration from '../assets/images/social-media.png';
 
 function Login() {
+
     return (
         <div className="container">
             <div className="row">
@@ -11,14 +12,28 @@ function Login() {
                 <div className="col-md-4">
                     <div className="form">
                         <div className="mb-3">
-                            <label for="exampleFormControlInput1" className="form-label">Username</label>
-                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="name" />
+                            <label for="username" className="form-label">Username</label>
+                            <input type="text" 
+                                className="form-control" 
+                                id="username"  
+                                placeholder="name" 
+                                />
                         </div>
                         <div className="mb-3">
-                            <label for="exampleFormControlInput1" className="form-label">Password</label>
-                            <input type="password" className="form-control" id="exampleFormControlInput1" />
+                            <label for="password" className="form-label">Password</label>
+                            <input 
+                                type="password" 
+                                className="form-control" 
+                                id="password" 
+                                placeholder="password" 
+                                />
                         </div>
-                        <button type="submit" class="btn btn-primary mb-3">Login</button>
+                        <button 
+                            type="submit" 
+                            class="btn btn-primary mb-3"
+                            >
+                            Login
+                            </button>
                     </div>
                 </div>
             </div>
