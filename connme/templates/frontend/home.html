@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    <title>Home</title>
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+    <h1>{{posts.author}}</h1>
+    <p>{{posts.captions}}</p>
+    {% for i in images %}
+        <img src="{{i.image.url}}" width="200px" height="200px" alt="">
+    {% endfor %}
+{% endblock %}

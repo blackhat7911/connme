@@ -1,0 +1,38 @@
+{% extends 'accounts/index.html' %}
+
+{% block title %}
+    <title>Register</title>
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="col-md-4" id="form-container">
+            <h1>Register</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" aria-describedby="textHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+                {{messages.message}}
+                <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                <br>
+                <span>
+                    Already have an account? <a href="" class="link-primary">Login</a>
+                </span>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
