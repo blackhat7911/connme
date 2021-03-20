@@ -7,9 +7,12 @@
 {% load static %}
 
 {% block content %}
-    <h1>{{posts.author}}</h1>
-    <p>{{posts.captions}}</p>
-    {% for i in images %}
-        <img src="{{i.image.url}}" width="200px" height="200px" alt="">
-    {% endfor %}
+    <!-- Center Container -->
+    <div class="center-container">
+        {% include 'frontend/center-container.html' %}
+    </div>
+    <!-- Right Container -->
+    <div class="right-container">
+        {% include 'frontend/right-container.html' %}
+    </div>
 {% endblock %}

@@ -1,1 +1,29 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
 
+.navbar{
+    margin: 5px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.navbar-brand{
+    font-family: Pacifico;
+}
+
+.navbar-toggler{
+    background-color: white;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.collapse{
+    justify-content: center;
+}
+
+.fas{
+    color: white;
+}

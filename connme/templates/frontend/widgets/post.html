@@ -1,0 +1,7 @@
+<div class="post-container bg-msecondary">
+    <h4 class="text-capitalize">{{posts.author}}</h4>
+    <p class="text-secondary">{{posts.captions}}</p>
+    {% for i in images %}
+        <img src="{{i.image.url}}" width="200px" alt="">
+    {% endfor %}
+</div>
