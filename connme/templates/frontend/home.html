@@ -7,12 +7,18 @@
 {% load static %}
 
 {% block content %}
-    <!-- Center Container -->
-    <div class="center-container">
-        {% include 'frontend/center-container.html' %}
-    </div>
-    <!-- Right Container -->
-    <div class="right-container">
-        {% include 'frontend/right-container.html' %}
+    <div class="main_container mt-2">
+        <!-- Left Container -->
+        <div class="left-container">
+
+        </div>
+        <!-- Center Container -->
+        <div class="center-container">
+            {% include 'frontend/center-container.html' %}
+        </div>
+        <!-- Right Container -->
+        <div class="right-container">
+            {% include 'frontend/right-container.html' %}
+        </div>
     </div>
 {% endblock %}

@@ -1,7 +1,46 @@
 <div class="post-container bg-msecondary">
-    <h4 class="text-capitalize">{{posts.author}}</h4>
+    <div class="row">
+        <div class="col-md-2">
+            <img src="{{profile.profile.url}}" class="rounded-image" alt="">
+        </div>
+        <div class="col-md-10">
+            <h4 class="text-capitalize text-light">{{posts.author}}</h4>
+        </div>
+    </div>
     <p class="text-secondary">{{posts.captions}}</p>
-    {% for i in images %}
-        <img src="{{i.image.url}}" width="200px" alt="">
-    {% endfor %}
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-inner" role="listbox">
+                {% for i in images %}
+                <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
+                  <img class="d-block w-100" width="100%" src="{{i.image.url}}"
+                    alt="First slide">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+            <i class="fas fa-chevron-circle-left"></i>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+            <i class="fas fa-chevron-circle-right"></i>
+        </button>
+    </div>
+    <div class="row p-1 mt-1">
+        <div class="col-md-4">
+            <button class="btn btn-tertiary">
+                <i class="fas fa-thumbs-up fa-lg"></i>
+            </button>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-tertiary">
+                <i class="fas fa-comment fa-lg"></i>
+            </button>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-tertiary">
+                <i class="fas fa-share fa-lg"></i>
+            </button>
+        </div>
+    </div>
 </div>
